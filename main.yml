@@ -1,0 +1,10 @@
+- hosts: all
+  # gather_facts: smart
+  remote_user: root
+  roles:
+    - { role: apt, become: true }
+    - { role: atom.io }
+    - { role: zsh }
+    - { role: docker, become: yes }
+    - { role: other }
+    - { role: autostart }

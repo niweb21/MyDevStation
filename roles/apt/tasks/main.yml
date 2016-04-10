@@ -1,0 +1,12 @@
+- name: add tiers repositories
+  apt_repository: repo={{ item }} state=present update_cache=no
+  with_items: "{{repositories}}"
+  register: apt_source_added
+
+- name: Update cache
+  apt: update_cache=yes
+  when: apt_source_added|changed
+
+- name: install packages
+  apt: name={{ item }} state=present update_cache=no
+  with_items: "{{packages}}"

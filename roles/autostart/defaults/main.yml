@@ -1,0 +1,13 @@
+applications:
+  atom:
+    name: "Atom.io"
+    exec: "atom"
+    icon: "atom"
+  fluxgui:
+    name: "f.lux indicator"
+    exec: "fluxgui"
+    icon: "fluxgui"
+  terminal:
+    name: "Terminal"
+    exec: "gnome-terminal"
+    icon: "utilities-terminal"

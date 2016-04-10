@@ -1,0 +1,12 @@
+repositories:
+  - ppa:webupd8team/atom
+  - ppa:pinta-maintainers/pinta-stable
+  - ppa:kilian/f.lux
+packages:
+  - atom
+  - git
+  - zsh
+  - apt-transport-https
+  - ca-certificates
+  - pinta
+  - fluxgui

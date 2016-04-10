@@ -1,0 +1,2 @@
+- template: src="app.desktop.j2" dest="~/.config/autostart/{{ item.key }}.desktop"
+  with_dict: "{{applications}}"

@@ -1,0 +1,29 @@
+- name: Verify php-cs-fixer binary is present
+  stat: path=/usr/local/bin/php-cs-fixer
+  register: phpcsfixer
+  changed_when: false
+
+- name: Install php-cs-fixer
+  get_url: url=http://get.sensiolabs.org/php-cs-fixer.phar dest=/usr/local/bin/php-cs-fixer
+  become: yes
+  when: not phpcsfixer.stat.exists
+
+- name: Set owner php-cs-fixer
+  file: path=/usr/local/bin/php-cs-fixer state=file owner={{ ansible_user_id }} mode=0775
+  become: yes
+  when: not phpcsfixer.stat.exists
+
+- name: Install atom plugins
+  apm: name={{ item }}
+  with_items:
+    - compare-files
+    - cursor-indicator
+    - file-icons
+    - indent-guide-improved
+    - language-ansible
+    - language-apache
+    - language-docker
+    - language-twig
+    - minimap
+    - php-cs-fixer
+    - project-manager
