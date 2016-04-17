@@ -1,8 +1,4 @@
-- name: verify multiple cycle application sizes
-  shell: dconf read /org/compiz/profiles/unity/plugins/grid/cycle-sizes
-  register: cyclesizes
-  changed_when: false
-
-- name: Add multiple cycle application sizes
-  shell: dconf write /org/compiz/profiles/unity/plugins/grid/cycle-sizes true
-  when: not cyclesizes.stdout == 'true'
+- name: Multiple cycle application sizes
+  gsetting: schema=org.compiz.grid:/
+            key=cycle-sizes
+            value=true
