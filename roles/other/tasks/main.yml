@@ -2,3 +2,13 @@
   gsetting: schema=org.compiz.grid:/
             key=cycle-sizes
             value=true
+
+- name: Icon menu bar
+  gsetting: schema=com.canonical.Unity.Launcher
+    key=favorites
+    value="['application://unity-control-center.desktop', 'application://gcalctool.desktop', 'application://nautilus.desktop', 'application://gnome-terminal.desktop', 'application://atom.desktop', 'unity://running-apps', 'application://firefox.desktop', 'unity://expo-icon', 'unity://devices']"
+
+- name: Remote content search false
+  gsetting: schema=com.canonical.Unity.Lenses
+            key=remote-content-search
+            value="'none'"
