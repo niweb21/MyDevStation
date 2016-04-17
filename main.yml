@@ -6,5 +6,5 @@
     - { role: atom.io }
     - { role: zsh }
     - { role: docker, become: yes }
-    - { role: other }
+    - { role: gsetting }
     - { role: autostart }
