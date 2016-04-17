@@ -6,5 +6,15 @@
     - { role: atom.io }
     - { role: zsh }
     - { role: docker, become: yes }
+    - { role: gitconfig }
     - { role: gsetting }
     - { role: autostart }
+
+  vars_prompt:
+    - name: "gitconfig_user_name"
+      prompt: "what is your gitconfig user.name"
+      private: no
+
+    - name: "gitconfig_user_email"
+      prompt: "what is your gitconfig user.email"
+      private: no

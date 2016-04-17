@@ -1,0 +1,3 @@
+- name: Add .gitconfig
+  template: src=".gitconfig.j2" dest="~/.gitconfig"
+  when: gitconfig_user_name and gitconfig_user_email
