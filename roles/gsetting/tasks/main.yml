@@ -12,3 +12,23 @@
   gsetting: schema=com.canonical.Unity.Lenses
             key=remote-content-search
             value="'none'"
+
+- name: Set font Ubuntu Mono derivative Powerline
+  gsetting: schema=org.gnome.desktop.interface
+            key=monospace-font-name
+            value="'Ubuntu Mono derivative Powerline 13'"
+
+- name: Show hidden files
+  gsetting: schema=org.gtk.Settings.FileChooser
+            key=show-hidden
+            value=true
+
+- name: Nautilus - list view mode
+  gsetting: schema=org.gnome.nautilus.preferences
+            key=default-folder-viewer
+            value="'list-view'"
+
+- name: Nautilus - default columns
+  gsetting: schema=org.gnome.nautilus.list-view
+            key=default-visible-columns
+            value="['name', 'size', 'type', 'date_modified', 'owner', 'group', 'permissions']"
