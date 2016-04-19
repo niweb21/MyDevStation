@@ -5,6 +5,7 @@ repositories:
 packages:
   - atom
   - git
+  - gitg
   - zsh
   - apt-transport-https
   - ca-certificates
