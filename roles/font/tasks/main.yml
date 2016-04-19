@@ -1,0 +1,25 @@
+- name: clone powerline fonts
+  git: repo=https://github.com/powerline/fonts.git dest=~/fonts
+
+- name: Create ~/.local/share/fonts directory
+  file: path=~/.local/share/fonts state=directory mode=0775
+
+- name: add Ubuntu Mono derivative Powerline
+  copy:
+    src="~/fonts/UbuntuMono/Ubuntu Mono derivative Powerline.ttf"
+    dest="~/.local/share/fonts/Ubuntu Mono derivative Powerline.ttf"
+
+- name: add Ubuntu Mono derivative Powerline Bold
+  copy:
+    src="~/fonts/UbuntuMono/Ubuntu Mono derivative Powerline Bold.ttf"
+    dest="~/.local/share/fonts/Ubuntu Mono derivative Powerline Bold.ttf"
+
+- name: add Ubuntu Mono derivative Powerline Bold Italic
+  copy:
+    src="~/fonts/UbuntuMono/Ubuntu Mono derivative Powerline Bold Italic.ttf"
+    dest="~/.local/share/fonts/Ubuntu Mono derivative Powerline Bold Italic.ttf"
+
+- name: add Ubuntu Mono derivative Powerline Italic
+  copy:
+    src="~/fonts/UbuntuMono/Ubuntu Mono derivative Powerline Italic.ttf"
+    dest="~/.local/share/fonts/Ubuntu Mono derivative Powerline Italic.ttf"
