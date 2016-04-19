@@ -1,6 +1,5 @@
 - name: clone oh-my-zsh git repository
   git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=~/.oh-my-zsh
-  register: gitclone
 
 - name: copy .zshrc
   copy: src=.zshrc dest=~/.zshrc
@@ -8,7 +7,5 @@
 - name: copy myagnoster theme
   copy: src=myagnoster.zsh-theme dest=~/.oh-my-zsh/themes/myagnoster.zsh-theme
 
-- name: change defautl shell
-  shell: chsh -s /bin/zsh
-  become: true
-  when: gitclone.changed
+- name: change default shell to zsh
+  user: name=nicolas shell=/bin/zsh
