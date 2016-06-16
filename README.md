@@ -9,6 +9,7 @@ Packages installed:
  * git
  * zsh
  * docker
+ * samba
  * pinta
  * f.lux
 

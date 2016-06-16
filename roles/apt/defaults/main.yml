@@ -11,3 +11,4 @@ packages:
   - ca-certificates
   - pinta
   - fluxgui
+  - samba
