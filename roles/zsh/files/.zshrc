@@ -53,14 +53,10 @@ DEFAULT_USER="nicolas"
 plugins=(git golang common-aliases)
 
 # User configuration
-
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/go/bin:$PATH
-export PATH=/home/nicolas/projects/go/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/workspace/go
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export GOPATH=$HOME/projects/go
 
 source $ZSH/oh-my-zsh.sh
 
