@@ -1,3 +1,7 @@
 - name: Add .gitconfig
   template: src=".gitconfig.j2" dest="~/.gitconfig"
   when: gitconfig_user_name and gitconfig_user_email
+
+- name: Copy diff-highlight
+  copy: src=/usr/share/doc/git/contrib/diff-highlight/diff-highlight dest=/usr/local/bin/diff-highlight mode=755
+  become: true
