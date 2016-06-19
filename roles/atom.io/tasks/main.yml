@@ -27,3 +27,7 @@
     - minimap
     - php-cs-fixer
     - project-manager
+    - open-git-modified-files
+    - tree-view-git-status
+    - git-history
+    - minimap-git-diff
