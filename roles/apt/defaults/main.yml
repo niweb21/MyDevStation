@@ -1,7 +1,8 @@
 repositories:
   - ppa:webupd8team/atom
-  - ppa:pinta-maintainers/pinta-stable
-  - ppa:kilian/f.lux
+  - ppa:git-core/ppa
+  - ppa:pinta-maintainers/pinta-daily
+  - ppa:nathan-renniewaldock/flux
 packages:
   - atom
   - git
